@@ -1,0 +1,56 @@
+
+
+    .multi-upload-container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .image-box {
+            position: relative;
+
+            img {
+                width: 75px;
+                height: 75px;
+                object-fit: cover;
+                border-radius: 3px;
+            }
+
+            .remove {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+    .border-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        border: 2px dashed var(--orange-color);
+        border-radius: 3px;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+
+        .file-upload {
+            cursor: pointer;
+        }
+
+        input {
+            width: 75px;
+            height: 75px;
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .upload-icon {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+}

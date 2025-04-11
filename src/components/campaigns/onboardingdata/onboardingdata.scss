@@ -1,0 +1,97 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+.onboarding-data{
+    .data-table-wrapped {
+        .data-table-container {
+            table {
+                th {
+                    font-size: var(--font_16);
+
+                    @include media_1600 {
+                        font-size: var(--font_14);
+                    }
+                    @include media_1280 {
+                        font-size: var(--font_12);
+                    }
+                }
+            }
+
+            .heading-table {
+                margin-bottom: 20px;
+            }
+
+            .child-table {
+                border-bottom: 1px solid var(--light-blue);
+                background-color: var(--white-color);
+                .checkcontainer{
+                    label{
+                        margin-top: 4px;
+                    }
+                }
+                .input-main-data{
+                    position: relative; 
+                    input{
+                    width: auto;
+                    position: relative;
+                    }
+                    svg{
+                        position: absolute;
+                        right: 7px;
+                        top: 14px;
+                    }
+                }
+                .detail-td {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+
+                    .detail {
+                        h2 {
+                            font-weight: 600;
+                            font-size: var(--font_14);
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                            }
+                        }
+
+                        span {
+                            color: var(--color_647C9B);
+                            font-size: var(--font_14);
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                            }
+
+                        }
+                    }
+                }
+
+                tr {
+                    td{
+                        padding: 10px;
+                        border-bottom: 1px solid var(--light-blue);
+                    }
+                    .xl-td{
+                        min-width: 300px;
+                    }
+                    border: none;
+                    .product-img {
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 3px;
+                        border: 1px solid var(--light-blue);
+                    }
+
+                    &.heaing-data {
+                        .product-img {
+                            height: 100px;
+                            width: 100px;
+                            @include media_1280 {
+                                height: 70px;
+                                width: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

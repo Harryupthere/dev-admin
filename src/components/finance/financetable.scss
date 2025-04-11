@@ -1,0 +1,53 @@
+@use '../../assest/scss/abstract/mixins' as *;
+
+.product-detail-table {
+    .table-product-details {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+
+        .item {
+            width: 20%;
+            border: 1px solid var(--light-blue);
+        }
+
+        .details {
+            width: 80%;
+        }
+    }
+
+    .data-table-wrapped {
+        .data-table-container {
+            table {
+                td {
+                    border: 1px solid var(--light-blue);
+                    max-width: 300px;
+                }
+
+                th {
+                    border: 1px solid #F4F7F9;
+                    font-size: var(--font_16);
+
+                    @include media_1600 {
+                        font-size: var(--font_14);
+                    }
+
+                    @include media_1280 {
+                        font-size: var(--font_12);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order-number-input {
+    .MuiInputBase-root {
+        input {
+            min-width: 115px!important;
+            @include media_1440{
+                min-width: 90px!important;
+             }
+        }
+    }
+}

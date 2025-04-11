@@ -1,0 +1,36 @@
+.custome-check-lists {
+    .accordion {
+        .accordion-item {
+            border: none;
+            margin-bottom: 5px;
+            .accordion-body{
+                padding: 8px 0;
+            }
+            .accordion-button {
+                box-shadow: none;
+                background-color: transparent;
+                padding: 0 30px;
+                font-weight: 600;
+                font-size: var(--font_14);
+                position: relative;
+                color: var(--black-color);
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    transform: none;
+                    height: 24px;
+                    width: 24px;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url(../../../assest/images/downsmall2.svg);
+                }
+
+                &.collapsed {
+                    &::after {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+}

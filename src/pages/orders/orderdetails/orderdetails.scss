@@ -1,0 +1,113 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.order-details {
+    .profile-card-main {
+        margin-bottom: 20px;
+    }
+
+    .theme-card {
+        margin-bottom: 20px;
+
+        .card-heading {
+            h2 {
+                font-size: var(--font_16);
+                color: var(--color_647C9B);
+                font-weight: 600;
+                line-height: 20px;
+                margin-bottom: 5px;
+                @include media_1600{
+                   font-size: var(--font_14);
+                }
+
+            }
+        }
+    }
+
+    .vs-data-flex {
+        display: flex;
+        gap: 20px;
+        @include media_991{
+            flex-direction: column;
+        }
+
+        .left-data {
+            width: 30%;
+
+            @include media_1200 {
+                width: 100%;
+            }
+        }
+
+        .right-data {
+            width: 70%;
+
+            @include media_1200 {
+                width: 100%;
+            }
+        }
+    }
+
+    .light-table {
+        table {
+            width: 100%;
+
+            tr {
+                border-bottom: 1px solid var(--light-blue);
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            td,
+            th {
+                font-size: var(--font_16);
+                font-weight: 400;
+                padding: 10px 0;
+                line-height: 20px;
+
+                @include media_1280{
+                    font-size: var(--font_12);
+                 }
+            }
+
+            td {
+                text-align: right;
+            }
+
+            .bold {
+
+                th,
+                td {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .right-flex-data {
+        display: flex;
+        gap: 20px;
+
+        @include media_768 {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .right-content-table {
+            width: 50%;
+
+            @include media_768 {
+                width: 100%;
+            }
+        }
+
+        .left-content-table {
+            width: 50%;
+
+            @include media_768 {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.user_roles{
+.create-role-actions{
+    background-color: var(--white-color);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+    .data-table-wrapped{
+        .data-table-container{
+            table{
+                .actions{
+                    align-items: center;
+                    justify-content: end    ;
+                    .viewlink{
+                        font-weight: 700;
+                        text-decoration: underline;
+                    }
+                }
+                td{
+                    border-right: 1px solid var(--light-blue);
+                    &:last-child{
+                        text-align: right;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}

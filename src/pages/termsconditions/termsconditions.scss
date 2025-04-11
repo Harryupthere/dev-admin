@@ -1,0 +1,17 @@
+
+.page-data-layout{
+    &.terms-conditions-data{
+        padding: 15px 0;
+        .text-top{
+            padding: 0 14px;
+        }
+        .table-content-faq{
+            .heading-inner{
+                padding: 0 14px;
+                .text-top{
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

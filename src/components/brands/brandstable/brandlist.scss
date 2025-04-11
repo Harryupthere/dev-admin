@@ -1,0 +1,46 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.brand-table {
+    width: 80%;
+    @include media_768{
+        width: 100%;
+    }
+    .brand-detail {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        img {
+            max-width: 75px;
+            border: 1px solid var(--light-blue);
+            border-radius: 3px;
+        }
+        span{
+            font-weight: 600;
+            color: var(--black-color);
+        }
+    }
+    .data-table-wrapped{
+        .data-table-container{
+            table{
+                th{
+                    &:first-child{
+                        text-align: left;padding-left: 20px;
+                    }
+                    text-align: center;
+                    &:first-child{
+                        width: 50%;
+                    }
+                }
+                td{
+                    text-align: center;
+                    color: var(--color_647C9B);
+                }
+                .actions {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}

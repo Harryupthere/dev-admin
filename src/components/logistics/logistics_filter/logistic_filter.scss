@@ -1,0 +1,13 @@
+.logistic-filter {
+    margin-bottom: 10px;
+    .select-filter {
+        display: flex;
+        align-items: center;
+        border-top: 1px solid var(--light-blue);
+        border-radius: 0;
+        .selected{
+            font-weight: 600;
+            display: block;
+        }
+    }
+}

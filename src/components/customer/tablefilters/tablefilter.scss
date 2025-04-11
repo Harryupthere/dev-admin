@@ -1,0 +1,24 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+.customer-filter{
+    .filter-button{
+        .filter-btn{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            justify-content: space-between;
+            background-color: #DFE9F3;
+            color: var(--color_647C9B);
+            min-width: 120px;
+            padding: 7.5px 10px;
+            font-weight: 600;
+            height: 35px;
+            border-radius: 3px;
+            img{
+                max-width: 20px;
+            }
+            @include media_1600{
+                height: 32px;
+            }
+        }
+    }
+}

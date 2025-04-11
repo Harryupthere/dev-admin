@@ -1,0 +1,73 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.create-expense-wrapped {
+    width: 50%;
+
+    @include media_1280 {
+        width: 70%;
+    }
+
+    .theme-card {
+        margin-bottom: 20px;
+    }
+
+    .input-main-data {
+        margin-bottom: 20px;
+        &.width_50{
+            width: 50%;
+        }
+        .rs-picker-toggle-wrapper{
+            width: 100%;
+            position: relative;
+            input{
+                padding-right: 20px;
+                
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                background: url(.../../../../../assest/images/icons/calender.svg) no-repeat center center;
+                background-size: contain;
+                pointer-events: none; /* Prevent interaction with the icon */
+              }
+        }
+        .rs-input-group{
+            overflow: hidden;
+            &:hover{
+               border-color: var(--light-blue);
+            }
+            &:focus{
+                outline: none;
+             }
+        }
+        .rs-input-group-addon{
+          display: none;
+        }
+    }
+
+    .theme-card-action {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .profile-img  {
+            img{
+            height: 35px;
+            border-radius: 50%;
+            border: 1px solid #DFE9F3;
+            object-fit: cover;
+            width: 35px;
+            }
+        }
+    }
+}

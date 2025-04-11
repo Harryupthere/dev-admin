@@ -1,0 +1,61 @@
+.alluserfiter {
+    .actions {
+        display: flex;
+        gap: 10px;
+
+        .edit {
+            display: flex;
+            align-items: center;
+            font-size: var(--font_12);
+            gap: 5px;
+            padding: 1.5px 7px;
+            line-height: 15px;
+            min-width: auto;
+            svg {
+                max-width: 15px;
+
+                path {
+                    stroke: var(--white-color);
+                    fill: transparent;
+                }
+            }
+
+            &:hover {
+                svg {
+                    max-width: 15px;
+
+                    path {
+                        stroke: var(--theme-blue);
+                    }
+                }
+            }
+        }
+
+        .delet {
+            background-color: transparent;
+        }
+
+    }
+
+    .sended {
+        background-color: #ADADAD;
+        svg {
+            path {
+                fill: #ADADAD;
+            }
+        }
+    }
+
+    .profile-pic {
+        img {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    .green-switch {
+        .sended {
+            opacity: 0.2;
+        }
+    }
+}

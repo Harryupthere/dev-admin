@@ -1,0 +1,10 @@
+// @use '../../assest/scss/abstract/mixins' as *;
+.view-roles{
+    .user-role{
+        label{
+            font-size: var(--font_16);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+@use '../../../assest/scss/abstract/_mixins.scss' as *;
+.delivery-card {
+    .input-main-data {
+        margin-bottom: 10px;
+        .input-text{
+            border: 1px solid #DFE9F3;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: var(--font_16);
+            font-weight: 300;
+            line-height: 20px;
+            @include media_1600{
+                font-size: var(--font_14);
+            }
+            @include media_1280{
+                font-size: var(--font_12);
+            }
+        }
+        label{
+            color: var(--color_647C9B);
+        }
+    }
+    .pay-here{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        .home-btn{
+            display: flex;
+            align-items: center;
+            padding: 6px 7px;
+            border-radius: 3px;
+            border: 1px solid var(--orange-color);
+            gap: 4px;
+            font-weight: 700;
+            line-height: 15px;
+            color: var(--orange-color);
+            background-color: transparent;
+            font-size: var(--font_12);
+        }
+    }
+    .shipping{
+        button{
+            @include border_button(var(--font_16),#008000,10px,3px,#008000,700);
+            width: 100%;
+        }
+    }
+}

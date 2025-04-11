@@ -1,0 +1,85 @@
+@use '../../assest/scss/abstract/mixins' as *;
+
+.attribute-list {
+    .flex-box {
+        display: flex;
+        gap: 50px;
+
+        @include media_991 {
+            gap: 20px;
+        }
+
+        @include media_768 {
+            flex-direction: column;
+        }
+
+        .listing {
+            width: 60%;
+            @include media_768 {
+               width: 100%;
+            }
+            .attribute-table {
+                .action-btns {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: center;
+                }
+
+                .data-table-wrapped {
+                    .data-table-container {
+                        table {
+
+                            th,
+                            td {
+                                padding: 11px 20px;
+                                text-align: center;
+
+                                &:first-child {
+                                    text-align: left;
+                                }
+                            }
+
+                            td {
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .add {
+            width: 40%;
+            margin-top: 40px;
+            @include media_768 {
+                width: 100%;
+                margin-top: 0;
+             }
+            .add-attributes {
+                .theme-card {
+                    margin-bottom: 10px;
+
+                    .main_heading {
+                        margin-bottom: 20px;
+
+                        h2 {
+                            font-weight: 600;
+                        }
+                    }
+
+                    .input-main-data {
+                        label {
+                            color: var(--black-color);
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .action-card {
+            border-radius: 3px 3px 0 0;
+        }
+    }
+}

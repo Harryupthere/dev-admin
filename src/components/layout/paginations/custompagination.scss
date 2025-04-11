@@ -1,0 +1,91 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.custom-pagination {
+    .custom-pagination-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        margin: 10px 0;
+        padding: 5px 20px;
+        border-radius: 5px;
+        font-family: var(--Quicksand);
+
+        .left-side {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .MuiSelect-select {
+                padding: 2px 30px 2px 10px;
+                font-size: var(--font_15);
+                font-family: var(--Quicksand);
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    background-image: url(../../../assest/images/icons/downorange.svg);
+                    padding: 6px;
+                    right: 8px;
+                    background-repeat: no-repeat;
+                    top: 10px;
+                }
+            }
+
+            .MuiOutlinedInput-root {
+                position: relative;
+
+                svg {
+                    display: none;
+                }
+            }
+
+            .MuiTypography-root {
+                font-family: var(--Quicksand);
+                font-size: var(--font_15);
+                font-weight: 300;
+                white-space: nowrap;
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+
+            fieldset {
+                border-color: var(--orange-color);
+            }
+        }
+
+        .righht-side {
+            margin-top: 0;
+            ul{
+                flex-wrap: nowrap;
+            }
+            .MuiPagination-outlined {
+                margin: 0;
+            }
+
+            .MuiPaginationItem-outlined {
+                border-color: var(--orange-color);
+                font-weight: 600;
+                color: var(--orange-color);
+                font-family: var(--Quicksand);
+                font-size: var(--font_16);
+
+                @include media_1280 {
+                    font-size: var(--font_14);
+                    height: 25px;
+                    width: 25px;
+                    min-width: auto;
+                }
+
+                &.Mui-selected {
+                    background-color: var(--orange-color);
+                    color: var(--white-color);
+                }
+            }
+        }
+    }
+}

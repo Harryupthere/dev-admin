@@ -1,0 +1,33 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.user-profile-wrapped {
+    .profile-section {
+        display: flex;
+        gap: 13px;
+        .details {
+            h2 {
+                font-size: var(--font_14);
+                font-weight: 700;
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+
+            h3 {
+                font-size: 13px;
+                font-weight: 400;
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+        }
+        .profile-img{
+            img{
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                border: 1px solid var(--light-blue);
+            }
+        }
+    }
+}

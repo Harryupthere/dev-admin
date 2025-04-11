@@ -1,0 +1,38 @@
+.deviceprogress{
+    h2{
+        color: #15134B;
+        margin-bottom: 5px;
+    }
+    .channel {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #F6F8FA;
+        margin-bottom: 5px;
+        h2 {
+            font-size: var(--font_14);
+            font-weight: 700;
+            line-height: 17.5px;
+        }
+    }
+    .pogressbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .label{
+            color: #5A5881;
+            font-size: var(--font_14);
+            font-weight: 500;
+            line-height: 17.5px;
+        }
+        .progresbarline {
+            width: 60%;
+            .progress{
+                height: 8px;
+            }
+            .progress-bar{
+                background-color: #563BFF;
+            }
+        }
+    }
+}

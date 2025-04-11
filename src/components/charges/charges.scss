@@ -1,0 +1,29 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.charges-table-wrapped{
+    width: 50%;
+    @include media_1600{
+        width: 70%;
+    }
+    @include media_1024{
+        width: 100%;
+    }
+    .action{
+        padding: 10px 20px;
+        background-color: var(--white-color);
+        display: flex;
+        justify-content: end;
+        gap: 10px;
+    }
+    .data-table-wrapped{
+        .data-table-container{
+            table{
+                td{
+                    padding: 16px 20px;
+                }
+                th{
+                    padding: 16px 20px;
+                }
+            }
+        }
+    }
+}

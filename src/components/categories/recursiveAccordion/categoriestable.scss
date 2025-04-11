@@ -1,0 +1,151 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.categories-table {
+    .main-header {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .right-content {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        align-items: center;
+        width: -webkit-fill-available;
+
+        span {
+            font-size: var(--font_14);
+            font-weight: 400;
+
+            @include media_1280 {
+                font-size: var(--font_12);
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 180px;
+            justify-content: center;
+        }
+
+        .prod {
+            width: 140px;
+            text-align: center;
+        }
+
+        .id {
+            width: 120px;
+            text-align: center;
+        }
+
+    }
+
+    .title {
+        width: -webkit-fill-available;
+    }
+
+    .table-header {
+        padding: 11px 0;
+        background-color: var(--light-blue);
+
+        .main-header {
+            .title {
+                padding-left: 20px;
+            }
+
+            span {
+                font-size: var(--font_14);
+                font-weight: 600;
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+        }
+    }
+
+    .accordion {
+        border-radius: 0;
+
+        .accordion-item {
+            border: none;
+            border-radius: 0;
+
+
+
+            .accordion-button {
+                box-shadow: none;
+                background-color: transparent;
+                padding: 5px 0 5px 50px;
+                font-weight: 400;
+                font-size: var(--font_14);
+                position: relative;
+                color: var(--black-color);
+                border-bottom: 1px solid var(--light-blue);
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+                &::after {
+                    position: absolute;
+                    left: 0;
+                    transform: none;
+                    height: 24px;
+                    width: 24px;
+                    background-position: center;
+                    background-size: cover;
+                    background-image: url(../../../assest/images/iconDrop.svg);
+
+                }
+
+                &.collapsed {
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+                }
+            }
+
+            .accordion-body {
+                padding: 0 0 0 50px;
+
+                .body-content {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                }
+
+                .main-ul {
+                    margin: 0;
+                    list-style: none;
+
+                    // padding: 0;
+                    li {
+                        font-weight: 400;
+                        font-size: var(--font_14);
+                        border-bottom: 1px solid var(--light-blue);
+                        padding-left: 20px;
+                        position: relative;
+                        @include media_1280 {
+                            font-size: var(--font_12);
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: 3px;
+                            top: 16px;
+                            height: 6px;
+                            width: 6px;
+                            background-color: var(--color_647C9B);
+                            border-radius: 50%;
+                        }
+
+                        &::marker {
+                            color: var(--color_647C9B);
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

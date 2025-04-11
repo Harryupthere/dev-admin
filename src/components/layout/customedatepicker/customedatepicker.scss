@@ -1,0 +1,65 @@
+.customdate {
+    align-items: center;
+    display: flex;
+
+    .datellabel {
+        background-color: #DFE9F3;
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 3px 0 0 3px;
+        border: 1px solid #DFE9F3;
+
+        label {
+            color: #647C9B;
+            font-weight: 600;
+        }
+    }
+.rs-input-group-inside{
+    // overflow: hidden;
+    background-color: transparent;
+    border-radius: 0 3px 3px 0;
+}
+    .rs-input-group{
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            outline: none;
+            box-shadow: none;
+            border-color: #DFE9F3;
+        }
+        .rs-date-range-input {
+            border-radius: 0 3px 3px 0;
+            padding: 6.5px 10px;
+        }
+        position: relative;
+        &::before{
+            content: "";
+            background-image: url(../../../assest/images/icons/downarrow.svg);
+            position: absolute;
+            right: 0;
+            top: 12px;
+            padding: 10px;
+            background-repeat: no-repeat;
+        }
+    }
+    .rs-picker-input-group{
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            outline: none;
+            box-shadow: none;
+            border-color: #DFE9F3;
+        }
+    }
+    .rs-picker-daterange {
+        .rs-input-group-addon {
+            svg {
+                display: none;
+            }
+        }
+    }
+}

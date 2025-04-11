@@ -1,0 +1,19 @@
+@use "../../../assest/scss/abstract/mixins" as *; 
+
+.top_logo {
+    padding-top: 25px;
+    padding-left: 40px;
+    img {
+        max-width: max-content;
+        @include media_768{
+           max-width: 200px;
+         }
+    }
+    @include media_1200{
+       padding-top: 10px;
+       padding-left: 20px;
+    }
+    @include media_768{
+       margin-bottom: 40px;
+    }
+}

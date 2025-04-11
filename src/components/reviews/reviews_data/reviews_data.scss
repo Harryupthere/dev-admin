@@ -1,0 +1,32 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.reviews-wrapped {
+    .product-item {
+        .item-body{
+            grid-template-columns: repeat(4,1fr);
+            .product-details{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .product-image{
+                    width: 30%;
+                }
+                .content{
+                    width: 70%;
+                }
+            }
+            .rating-start{
+                display: flex;
+                gap: 5px;
+                svg{
+                    @include media_1600{
+                        max-width: 25px;
+                      }
+                    @include media_1280{
+                      max-width: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.reconcilation-table{
+    .data-table-wrapped{
+        .data-table-container{
+            table{
+                th,td{
+                    padding: 20px 10px;
+                }
+                td{
+                    border: 1px solid var(--light-blue);
+                }
+                th{
+                    border: 1px solid #F4F7F9;
+                }
+            }
+        }
+    }
+    .selected {
+        padding: 0 20px 20px 20px;
+        background-color: var(--white-color);
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .selected-data{
+            font-weight: 700;
+        }
+    }
+}

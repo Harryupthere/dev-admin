@@ -1,0 +1,24 @@
+.unablelogin{
+    &.fairbay_modals{
+    .modal_header{
+        .modal_heaing{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .modal_body{
+        .content{
+            p{
+                margin: 10px 0;
+            }
+        }
+    }
+    .modal_footer{
+        .action_btn{
+            .modal_okay{
+              color: var(--light-blue);
+            }
+        }
+    }
+}
+}

@@ -1,0 +1,141 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.help-wrapped {
+    .data-table-wrapped {
+        .data-table-container {
+            margin-bottom: 20px;
+            table{
+                th{
+                    padding: 11px 27px;
+                    font-size: var(--font_16);
+                    @include media_1600{
+                    font-size: var(--font_14);
+                    }
+                    @include media_1280{
+                        font-size: var(--font_12);
+                    }
+                }
+            }
+        }
+    }
+    .product-item {
+        padding: 10px 20px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+        margin-bottom: 20px;
+        .empty-data{
+            text-align: center;
+            color: var(--color_647C9B);
+        }
+        p {
+            margin-bottom: 0;
+            font-size: var(--font_14);
+            font-weight: 300;
+            @include media_1280{
+                font-size: var(--font_12);  
+            }
+        }
+        .bold-text{
+            font-weight: 700;
+            color: var(--theme-blue);
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-blue);
+
+            .leftside {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                .profile {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-right: 10px;
+                    border-right: 1px solid var(--light-blue);
+
+                    h4 {
+                        font-size: var(--font_14);
+                        font-weight: 600;
+                        @include media_1280{
+                            font-size: var(--font_12);
+                        }
+                    }
+
+                    .profile-pic {
+                        img {
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        .item-body{
+            padding: 10px 0;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            border-bottom: 1px solid var(--light-blue);
+
+            .body-item{
+                border-right: 1px solid var(--light-blue);
+                padding: 0 10px;
+                &:first-child{
+                    padding-left: 0;
+                }
+                &:last-child{
+                    border: none;
+                }
+                p{
+                    margin-bottom: 10px;
+                    @include media_1280{
+                        margin-bottom: 2px;
+                    }
+                }
+                .given-img{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 10px;
+                    img{
+                        max-width: 82px;
+                        border-radius: 5px;
+                        @include media_1600{
+                         max-width: 70px;
+                        }
+                        @include media_1280{
+                            max-width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .item-footer{
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .leftside {
+                display: flex;
+                gap: 10px;
+                .status {
+                    display: flex;
+                    gap: 10px;
+                    .bold-text{
+                        color: #99B9E3;
+                        background-color: #DFECFC;
+                        border-radius: 3px;
+                        padding: 4px
+                    }
+                }
+            }
+            .rightside{
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}

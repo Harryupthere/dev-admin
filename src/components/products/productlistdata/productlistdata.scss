@@ -1,0 +1,286 @@
+@use '../../../assest/scss/abstract/mixins' as*;
+
+.productlist_data {
+    .action-card {
+        align-items: center;
+        border-top: 1px solid var(--light-blue);
+        border-radius: 0;
+
+        .selected {
+            font-size: var(--font_16);
+            font-weight: 700;
+
+            @include media_1600 {
+                font-size: var(--font_14);
+            }
+        }
+    }
+
+    .data-table-wrapped {
+        .data-table-container {
+            table {
+                @include media_768 {
+                    width: max-content;
+                }
+
+                .checkcontainer {
+                    justify-content: center;
+                }
+
+                tr {
+                    border: none;
+                }
+
+                .border_top {
+                    border-top: 1px solid var(--light-blue);
+                }
+
+                .flex_box {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    justify-content: center;
+
+                    img {
+                        height: 15px;
+                        width: 15px;
+                    }
+                }
+
+                .profile-created-by {
+                    gap: 10px;
+                    justify-content: start;
+
+                    @include media_1280 {
+                        gap: 5px;
+                    }
+
+                    .details {
+                        text-align: left;
+
+                        h2 {
+                            font-size: var(--font_14);
+                            font-weight: 700;
+
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                            }
+                        }
+
+                        h3 {
+                            font-size: 13px;
+                            font-weight: 400;
+
+                            @include media_1280 {
+                                font-size: var(--font_10);
+                            }
+                        }
+                    }
+
+                    .profile-img {
+                        img {
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 50%;
+                            border: 1px solid var(--light-blue);
+
+                            @include media_1280 {
+                                height: 25px;
+                                width: 25px;
+                            }
+                        }
+                    }
+                }
+
+                td,
+                th {
+                    max-width: 100%;
+                    text-align: center;
+
+                    &:nth-child(2) {
+                        text-align: left;
+                    }
+
+                    &.table_w_40 {
+                        width: 300px;
+                    }
+
+                    &.table_w_10 {
+                        width: 30px;
+                    }
+
+                    svg {
+                        max-width: 14px;
+                    }
+                }
+
+                .product-details {
+                    display: flex;
+                    gap: 20px;
+
+                    .item-img {
+                        img {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 3px;
+                            border: 1px solid var(--light-blue);
+
+                            @include media_1280 {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+
+                        &.main-item-img {
+                            img {
+                                height: 100px;
+                                width: 100px;
+
+                                @include media_1280 {
+                                    width: 60px;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                    }
+
+                    .item-details {
+                        h3 {
+                            font-size: var(--font_14);
+                            font-weight: 600;
+
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                            }
+                        }
+
+                        span {
+                            color: #647C9B;
+                            font-size: var(--font_14);
+
+                            @include media_1600 {
+                                font-size: var(--font_12);
+                            }
+                        }
+
+                        .black-text {
+                            color: var(--black-color);
+                            font-weight: 400;
+                        }
+                    }
+                }
+
+                .switch {
+                    position: relative;
+
+                    input {
+                        width: 40px;
+                        height: 24px;
+                        border: 0;
+                        margin-right: 3px;
+                        position: relative;
+                        top: 3px;
+                        appearance: none;
+                        -webkit-appearance: none;
+                        background-image: url(../../../assest/images/greenuncheck.svg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                        @include media_1280 {
+                            width: 30px;
+                            height: 18px;
+                        }
+
+                        &:checked {
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: inherit;
+                            height: inherit;
+                            border-radius: inherit;
+                            position: absolute;
+                            transform: scale(1);
+                            transform-origin: center center;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            background-image: url(../../../assest/images/greencheked.svg);
+                            width: 40px;
+                            height: 24px;
+                            background-color: #fff;
+                            opacity: 0;
+
+                            @include media_1280 {
+                                width: 30px;
+                                height: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .action-section {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 5px;
+
+                    svg {
+                        max-width: 24px;
+                    }
+
+                    .blue_button {
+                        font-size: var(--font_12);
+                        padding: 5px;
+                        min-width: auto;
+                        display: flex;
+                        align-items: center;
+                        gap: 3px;
+
+                        @include media_1280 {
+                            font-size: var(--font_10);
+                        }
+
+                        svg {
+                            height: 11px;
+                            width: 11px;
+
+                            path {
+                                stroke: var(--white-color);
+                            }
+                        }
+
+                        &:hover {
+                            svg {
+                                path {
+                                    stroke: var(--theme-blue);
+                                }
+                            }
+                        }
+                    }
+
+                    svg {
+                        max-width: 24px;
+
+                        @include media_1280 {
+                            max-width: 20px;
+                        }
+                    }
+
+                    .link-icon {
+                        max-width: 24px;
+
+                        @include media_1280 {
+                            max-width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

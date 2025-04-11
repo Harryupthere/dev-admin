@@ -1,0 +1,39 @@
+.add-user-form {
+    .flex-equal-box {
+        display: flex;
+        gap: 20px;
+    }
+
+    .right-content {
+        width: 50%;
+    }
+
+    .left-content {
+        width: 50%;
+    }
+
+    .theme-card {
+        &.theme-card-action {
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+    }
+
+    .input-main-data {
+        margin-bottom: 20px;
+        label {
+            font-size: var(--font_14);
+        }
+        .selected-item{
+            color: var(--color_647C9B);
+            font-size: var(--font_14);
+            font-weight: 300;
+        }
+    }
+
+    .action-btn {
+        display: flex;
+        gap: 10px;
+    }
+
+}

@@ -1,0 +1,37 @@
+.rate-card-table {
+    .data-table-wrapped {
+        .data-table-container {
+            table {
+                td,th{
+                    padding: 11px 20px;
+                }
+                .action-btns{
+                    display: flex;
+                    gap: 10px;  
+                    .blue_button{
+                        font-size: var(--font_12);
+                        padding: 5px;
+                        min-width: auto;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        line-height: 14px;
+                        svg{
+                            max-width: 12px;
+                            path{
+                                stroke: var(--white-color);
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                path{
+                                    stroke: var(--theme-blue);
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

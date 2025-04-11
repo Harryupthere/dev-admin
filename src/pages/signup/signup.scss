@@ -1,0 +1,121 @@
+.signup-wrappped {
+    background-color: var(--white-color);
+    .two-flex-box {
+        display: flex;
+        
+        .signup-banner {
+            width: 45%;
+
+            img {
+                height: 100vh;
+                // object-fit: cover;
+                object-position: 20% 50%;
+            }
+        }
+
+        .signup-form {
+            width: 55%;
+
+            form {
+                width: 80%;
+                margin: auto;
+                padding-top: 100px;
+                .two-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 50px;
+                }
+
+                .upload-image-wrapped {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    .image-upload-box {
+                        text-align: center;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        border: 2px dashed var(--orange-color);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        text-align: center;
+                        margin: auto;
+                        margin-bottom: 8px;
+                        position: relative;
+
+                        &.remove-boder {
+                            border: none;
+                        }
+
+                        .image-preview {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+
+                        .camera {
+                            width: 23px;
+                        }
+                        // .camera-button {
+                        //     position: absolute;
+                        //     background-color: var(--orange-color);
+                        //     padding: 6px;
+                        //     right: -8px;
+                        //     border-radius: 5px;
+                        //     bottom: 0;
+
+                        //     svg {
+                        //         path {
+                        //             fill: var(--white-color);
+                        //         }
+                        //     }
+                        // }
+                    }
+
+                    .profile-label {
+                        font-weight: 500;
+                        font-size: var(--font_14);
+                    }
+                }
+
+                .input-main-data {
+                    margin-bottom: 12px;
+                    input{
+                        padding: 15px 10px;
+                    }
+                    label{
+                        color: #2D3748;
+                        font-weight: 400;
+                    }
+                    .eyeicon {
+                        position: absolute;
+                        right: 10px;
+                        top: 50%;
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+
+                    .password-style {
+                        input[type='password'] {
+                            font-family: Verdana;
+                            letter-spacing: 0.125em;
+                            color: #647C9B;
+
+                            &::placeholder {
+                                font-family: var(--Quicksand);
+                                letter-spacing: 0;
+
+                            }
+                        }
+                    }
+                }
+                .blue_button{
+                    padding: 12.5px;
+                    font-size: var(--font_20);
+                }
+            }
+        }
+    }
+}

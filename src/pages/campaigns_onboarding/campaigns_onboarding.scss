@@ -1,0 +1,22 @@
+.campaigns-onboarding-wrapped{
+    .commontabs {
+        .nav-tabs{
+            gap: 20px;
+            margin-bottom: 10px;
+            flex-wrap: nowrap;
+            li{
+                width: 100%;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .fairdeal-product-img{
+        margin-bottom: 20px;
+        img{
+            width: auto;
+            max-width: 300px;
+        }
+    }
+}

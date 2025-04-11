@@ -1,0 +1,37 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.total-transactions-card{
+    background-color: var(--white-color);
+    padding: 20px;
+    .grid-section{
+        display: flex;
+        gap: 20px;
+        .item{
+            width: calc(33.33% - 20px);
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid var(--light-blue);
+            &.green{
+                border-left: 10px solid #2DD683;
+            }
+            &.orange{
+                border-left: 10px solid var(--orange-color);
+            }
+            &.blue{
+                border-left: 10px solid #00B3FF;
+            }
+            label{
+                color: var(--color_647C9B);
+                font-weight: 600;
+                margin-bottom: 11px;
+            }
+            h3{
+                font-weight: 600;
+                font-size: var(--font_16);
+                @include media_1280{
+                    font-size: var(--font_14);
+                }
+            }
+        }
+    }
+}

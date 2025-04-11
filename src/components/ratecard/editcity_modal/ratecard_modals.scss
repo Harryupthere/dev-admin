@@ -1,0 +1,77 @@
+.fairbay_modals {
+    &.edit-district{
+        .modal-dialog {
+            max-width: 600px;
+        }
+        .modal_header {
+            margin-bottom: 10px;
+        }
+        .apply-filter{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 10px;
+            input{
+                padding:7.5px 10px;
+            }
+            button{
+                white-space: nowrap;
+            }
+        .input-main-data {
+            margin: 0;
+        }
+        }
+        table{
+            width: 100%;
+            th,td{
+                font-size: var(--font_14);
+            }
+            th{
+                width: 33.33%;
+                padding: 11px 20px;
+                background-color: var(--light-blue);
+            }
+            td{
+                padding: 11px 5px;
+                border-bottom: 1px solid var(--light-blue);
+            }
+            tr{
+                &:last-child{td{border: none;}}
+            }
+        }
+    }
+    &.ratecard-modal {
+        .modal-dialog {
+            max-width: 600px;
+        }
+        .modal_header {
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--light-blue);
+            margin-bottom: 10px;
+        }
+
+        .input-main-data {
+            margin-bottom: 20px;
+
+            label {
+                color: var(--black-color);
+            }
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+
+        .modal_footer {
+            border: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .city-id {
+                margin-bottom: 0;
+                color: var(--color_647C9B);
+            }
+        }
+    }
+}

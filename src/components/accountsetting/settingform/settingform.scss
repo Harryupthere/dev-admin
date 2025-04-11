@@ -1,0 +1,17 @@
+.account-setting-form {
+    .right-content {
+        .two-grid {
+            &.modifying {
+                align-items: center;
+                // gap: 10px;
+                .blue_button{
+                    min-width: 120px;
+                }
+            }
+        }
+        .action-btn{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+.variants {
+    .input-main-data{
+        position: relative;
+            &.rs{
+                &::before{
+                    position: absolute;
+                    content: "Rs";
+                    left: 10px;
+                    top: 10px;
+                    color: var(--color_647C9B);
+                    font-weight: 300;
+                    font-size: var(--font_16);
+                    @include media_1600{
+                    font-size: var(--font_14);
+                    top:8px;
+                    }
+                }
+                input{
+                    padding-left: 30px;
+                }
+            }
+        }
+    .blue-card {
+        padding: 20px;
+        background-color: #F4F7F9;
+        border-radius: 5px;
+        @include media_768{
+         padding: 8px;
+        }
+        .action-card {
+            padding: 10px;
+        }
+
+        .parent-variant {
+            margin-bottom: 20px;
+
+            h4 {
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            .input-main-data {
+                width: 40%;
+                @include media_768{
+                   width: 100%;
+                }
+            }
+        }
+
+        .variant-damily-check {
+            margin-bottom: 20px;
+
+            .checkcontainer {
+                label {
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .variant-type {
+            align-items: center;
+            gap: 20px;
+
+            .input-main-data {
+                width: 40%;
+                min-width: 100px;
+            }
+
+            .delete-this {
+                margin-left: auto;
+            }
+        }
+        margin-bottom: 20px;
+        &.sub-variant{
+            padding: 22px;
+            @include media_768{
+              padding: 10px;
+            }
+            .checkcontainer {
+                label {
+                    font-weight: 700;
+                    color: #ADADAD;
+                }
+            }
+        }
+    }
+    .variant-table{
+        width: 100%;
+        overflow-x: auto;
+    }
+    .multi-upload-container {
+        .image-box {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .border-box {
+            width: 50px;
+            height: 50px;
+            input{
+                width: 50px;
+                height: 50px;
+            }  
+        }
+    }
+    .filters{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 20px;
+        @include media_1600{
+           gap: 5px;
+        }
+
+        .orange_button{
+            padding: 6px 10px;
+        }
+        .input-main-data{
+            &.select-mui-vs{
+                input{
+                padding: 5px;
+                min-width: 120px;
+                }
+            }
+            input{
+                font-size: var(--font_14);
+                padding: 7px 10px;
+                @include media_1600{
+                    font-size: var(--font_12);
+                    width: 90px;
+                }
+            }
+            .small{
+                max-width: 109px;
+                @include media_1600{
+                   max-width: 90px;
+                   width: 90px;
+                   &::placeholder{
+                    font-size: var(--font_12);
+                   }
+                }
+            }
+            &.rs{
+                &::before{
+                    top: 5px;
+                    font-weight: 300;
+                }
+                input{
+                    padding-left: 30px;
+                }
+            }
+        }
+        .special-price-popup {
+            z-index: 1;
+            position: absolute;
+            background-color: #fff;
+            padding: 20px;
+            width: 600px;
+            top: -100px;
+            border-radius: 5px;
+            border: 1px solid #647C9B;
+            top: -220px;
+            .main_heading{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .input-main-data{
+                margin-bottom: 10px;
+                label{
+                    font-weight: 300;
+                }
+                input{
+                padding: 10px;
+                width: auto;
+                }
+            }
+            .input-with-select {
+                width: 60%;
+                .rs-picker-toggle-wrapper{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .variant-table{
+        table{
+            width: 100%;
+            @include media_768{
+                width: max-content;
+            }
+            .input-main-data{
+               select{
+                    padding: 5px;
+                }
+            }
+            td,th{
+                border: 1px solid var(--light-blue);
+                padding: 10px;
+            }
+            th{
+                background-color: var(--light-blue);
+                border-left: 1px solid var(--white-color);
+                border-right: 1px solid var(--white-color);
+            }
+        }
+    }
+}

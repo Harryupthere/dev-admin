@@ -1,0 +1,48 @@
+.order-history {
+    .theme-card {
+        .card-heading {
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+
+        .steps {
+            padding-left: 30px;
+            position: relative;
+
+            .title {
+                font-size: var(--font_14);
+                font-weight: 600;
+                margin-bottom: 7px;
+            }
+
+            .date {
+                font-size: var(--font_14);
+                font-weight: 300;
+            }
+            &::before {
+                content: '';
+                background-image: url(../../../assest/images/icons/checkicon.svg);
+                position: absolute;
+                left: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 8px;
+            }
+            &::after{
+                content: '';
+                height: 50%;
+                width: 2px;
+                background-color: var(--light-blue);
+                position: absolute;
+                left: 7px;
+                top: 20px;
+            }
+            &:last-child{
+                &::after{
+                    content: none;
+                }
+            }
+        }
+    }
+}

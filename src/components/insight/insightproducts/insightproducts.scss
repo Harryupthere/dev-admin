@@ -1,0 +1,122 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.insight-detail-list {
+    margin-bottom: 20px;
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .left-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @include media_768 {
+                flex-wrap: wrap;
+            }
+        }
+
+        .info-in-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            label {
+                font-weight: 300;
+                font-size: var(--font_14);
+
+                @include media_768 {
+                    font-size: var(--font_12);
+                }
+            }
+
+            span {
+                color: var(--theme-blue);
+                font-weight: 700;
+                font-size: var(--font_14);
+
+                @include media_768 {
+                    font-size: var(--font_12);
+                }
+            }
+        }
+    }
+
+    .data-table-wrapped {
+        margin-bottom: 10px;
+
+        .data-table-container {
+            table {
+                overflow: hidden;
+                border-radius: 4px;
+
+                th {
+                    min-width: 100px;
+
+                    &:first-child {
+                        padding: 10px 20px;
+                    }
+
+                    @include media_1280 {
+                        min-width: 60px;
+                    }
+                }
+
+                td {
+                    max-width: 200px;
+                    font-weight: 400;
+                    padding: 10px;
+                    border-right: 1px solid var(--light-blue);
+                   &:first-child{
+                    padding: 10px 20px;
+                   }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+
+                .item-dtails {
+                    display: flex;
+                    gap: 10px;
+                    align-items: self-start;
+
+                    .item-img {
+                        border: 1px solid var(--light-blue);
+                        border-radius: 3px;
+                        overflow: hidden;
+
+                        img {
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+
+                    .details {
+                        p {
+                            margin-bottom: 4px;
+                            line-height: 17.5px;
+                        }
+
+                        label {
+                            color: var(--theme-blue);
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .action-btns {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

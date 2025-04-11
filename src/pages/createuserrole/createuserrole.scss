@@ -1,0 +1,26 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.create-role-wrapped{
+    .role-content-wrap{
+        width: 50%;
+        @include media_768{
+            width: 100%;
+        }
+        .theme-card{
+            margin-bottom: 20px;
+        }
+    }
+    .input-main-data{
+        margin-bottom: 20px;
+        label{
+            color: var(--black-color);
+        }
+    }
+    .actionbtn{
+        display: flex;
+        gap: 10px;
+        justify-content: end;
+        background-color: var(--white-color);
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+}

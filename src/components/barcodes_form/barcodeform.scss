@@ -1,0 +1,38 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.barcodes_form{
+    .input-main-data{
+        margin-bottom: 20px;
+        label{
+            color: var(--black-color);
+        }
+    }
+    .show-label{
+        padding: 10px;
+        border-radius: 3px;
+        background-color: var(--light-blue);
+        color: var(--color_647C9B);
+    }
+    .theme-card{
+        margin-bottom: 20px;
+    }
+    .detail-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        .header-item{
+            margin: 0;
+            position: relative;
+            border-right: 1px solid var(--light-blue);
+            padding-right: 20px;
+            @include media_1440{
+                padding-right: 10px;
+                font-size: var(--font_12);
+            }
+            &:last-child{
+               padding: 0;
+               border: none;
+            }
+        }
+    }
+}

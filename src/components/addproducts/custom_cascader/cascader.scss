@@ -1,0 +1,112 @@
+.custom-cascader {
+    position: absolute;
+    background-color: var(--white-color);
+    z-index: 11;
+    padding: 20px;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    border: 1px solid var(--color_647C9B);
+    border-radius: 5px;
+    overflow-x: auto;
+    .all-search {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .search-filed {
+            min-width: 250px;
+        }
+    }
+
+    .search-filed {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            background-image: url(../../../assest/images/icons/search.svg);
+            padding: 10px;
+            right: 5px;
+            top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding-right: 30px;
+            margin-bottom: 5px;
+            &::placeholder {
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    .cascader-body {
+        display: flex;
+        padding: 5px 0;
+        border-radius: 5px;
+        border: 1px solid var(--light-blue);
+        width: fit-content;
+
+        .item {
+            padding: 0 10px;
+            border-right: 1px solid var(--light-blue);
+            max-height: 400px;
+            overflow-y: auto;
+            &::-webkit-scrollbar-track {
+                border-radius: 10px;
+                border: 1px solid var(--light-blue);
+              }
+               
+              &::-webkit-scrollbar-thumb {
+                background: var(--color_647C9B); 
+                border-radius: 10px;
+              }
+              &::-webkit-scrollbar {
+                width: 10px;
+              }
+            &:last-child {
+                border: 0;
+            }
+        }
+
+        .category-code {
+            .category-item {
+                padding: 11px 2px;
+                border-bottom: 1px solid var(--light-blue);
+                position: relative;
+                cursor: pointer;
+                min-width: 150px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 5px;
+                    top: 12px;
+                    background-image: url(../../../assest/images/iconDrop.svg);
+                    padding: 10px;
+                    transform: rotate(-90deg);
+                }
+                
+            }
+            &.selected{
+                .category-item{
+                    background-color: #DFE9F3;
+                }
+            }
+        }
+    }
+}
+
+.category-input{
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 9px;
+        background-image: url(../../../assest/images/iconDrop.svg);
+        padding: 10px;
+    }
+    
+}

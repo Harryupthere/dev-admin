@@ -1,0 +1,22 @@
+.profile-form-main{
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    .input-main-data{
+        margin-bottom: 10px;
+        .icon-input-bth {
+            position: relative;
+            .btn-edit-input {
+                position: absolute;
+                right: 7px;
+                top: 9px;
+            }
+        }
+    }
+    .btn-edit{
+        display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+}

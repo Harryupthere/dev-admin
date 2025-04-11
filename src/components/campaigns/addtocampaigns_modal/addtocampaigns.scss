@@ -1,0 +1,128 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.add-to-compaign-modal {
+    .modal-dialog {
+        min-width: 1000px;
+
+        @include media_1440 {
+            min-width: 800px;
+        }
+
+        @include media_1280 {
+            min-width: 90%;
+        }
+    }
+
+    .modal_header {
+        border-bottom: 1px solid var(--light-blue);
+        padding-bottom: 10px;
+    }
+
+    .modal_body {
+        .filter-items {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 10px;
+
+            .input-main-data {
+                width: 100%;
+
+                input {
+                    padding: 9px;
+                    padding-right: 27px;
+                }
+
+                &::after {
+                    content: '';
+                    background-image: url(../../../assest/images/icons/search.svg);
+                    border: none;
+                    padding: 10px;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    right: 5px;
+                    top: 7px;
+                }
+            }
+
+            .orange_button {
+                min-width: auto;
+                padding: 3px 7px;
+
+                svg {
+                    path {
+                        stroke: var(--white-color);
+                        fill: transparent;
+                    }
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            stroke: var(--orange-color);
+                            fill: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .data-table-wrapped {
+            .data-table-container {
+                table {
+                    th {
+                        font-size: var(--font_16);
+
+                        @include media_1600 {
+                            font-size: var(--font_14);
+                        }
+                    }
+                }
+
+                .heading-table {
+                    margin-bottom: 20px;
+                }
+
+                .child-table {
+                    border-bottom: 1px solid var(--light-blue);
+
+                    .detail-td {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+
+                        .detail {
+                            h2 {
+                                font-weight: 600;
+                                font-size: var(--font_14);
+                            }
+
+                            span {
+                                color: var(--color_647C9B);
+                                font-size: var(--font_14);
+
+                            }
+                        }
+                    }
+
+                    tr {
+                        border: none;
+
+                        .product-img {
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 3px;
+                            border: 1px solid var(--light-blue);
+                        }
+
+                        &:first-child {
+                            .product-img {
+                                height: 100px;
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

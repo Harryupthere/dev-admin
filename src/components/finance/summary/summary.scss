@@ -1,0 +1,141 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.finance-summery {
+    width: 80%;
+
+    @include media_1024 {
+        width: 90%;
+    }
+
+    @include media_min_1600 {
+        width: 50%;
+    }
+
+    .common-filter-design {
+        margin-bottom: 20px;
+    }
+
+    .summary-layout {
+        width: 100%;
+
+        .total-price {
+            margin-bottom: 50px;
+
+            @include media_1600 {
+                margin-bottom: 35px;
+
+            }
+
+            @include media_1280 {
+                margin-bottom: 20px;
+
+            }
+        }
+
+        .sumary_row {
+            display: flex;
+            align-items: start;
+            gap: 30px;
+
+            .title {
+                width: 25%;
+
+                h2 {
+                    font-size: var(--font_14);
+                    font-weight: 600;
+
+                    @include media_1280 {
+                        font-size: var(--font_12);
+                    }
+                }
+            }
+
+            .summary_item {
+                width: 75%;
+            }
+        }
+
+        .total {
+            padding-left: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 10px;
+            border-top: 1px solid var(--light-blue);
+
+            h3 {
+                font-size: var(--font_14);
+
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+        }
+
+        .accordion {
+            margin-bottom: 10px;
+
+            .accordion-item {
+                border: none;
+                margin-bottom: var(--font_14);
+
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+
+                .accordion-button {
+                    padding: 0;
+                    border: none;
+                    padding-left: 30px;
+                    background-color: transparent;
+                    box-shadow: none;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: var(--font_14);
+
+                    @include media_1280 {
+                        font-size: var(--font_12);
+                    }
+
+                    &::after {
+                        margin-left: 0;
+                        margin-right: 10px;
+                        position: absolute;
+                        left: 0;
+                        background-image: url(../../../assest/images/downsmall2.svg);
+                        padding: 6px;
+                        object-fit: contain;
+                        width: 20px;
+                        transform: none;
+                    }
+
+                    &.collapsed {
+                        &::after {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+
+                .accordion-body {
+                    padding-right: 0;
+                    padding: 10px 0 0 30px;
+
+                    .item {
+                        display: flex;
+                        justify-content: space-between;
+
+                        h3 {
+                            font-size: var(--font_14);
+                            color: var(--theme-blue);
+                            margin-bottom: 11px;
+
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

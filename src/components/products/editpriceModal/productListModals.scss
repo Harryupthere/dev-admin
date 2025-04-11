@@ -1,0 +1,145 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.modal-backdrop {
+    z-index: 1 !important;
+}
+
+.product-list-modals {
+    &.modal {
+        z-index: 1 !important;
+    }
+
+    .rs-picker-input-group {
+        input {
+            &::placeholder {
+                color: var(--color_647C9B);
+            }
+        }
+    }
+
+    .modal_header {
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+
+    .common-filter-design {
+        margin-bottom: 10px;
+    }
+
+    .product-details {
+        display: flex;
+        gap: 20px;
+
+        .item-img {
+            img {
+                height: 40px;
+                width: 40px;
+                border-radius: 3px;
+                border: 1px solid var(--light-blue);
+            }
+        }
+
+        .item-details {
+            h3 {
+                font-size: 14px;
+                font-weight: 600;
+
+                @include media_1280 {
+                    font-size: var(--font_12);
+                }
+            }
+
+            span {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .one-product {
+        border: 1px solid var(--light-blue);
+        border-radius: 5px;
+        margin-bottom: 10px;
+
+        .product-details {
+            padding: 10px;
+            border-bottom: 1px solid var(--light-blue);
+
+            &:last-child {
+                border: none;
+            }
+
+            .item-img {
+                img {
+                    height: 100px;
+                    width: 100px;
+
+                    @include media_1280{
+                        height: 75px;
+                        width: 75px;
+                    }
+                    @include media_768{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .price-table {
+        overflow-x: auto;
+
+        table {
+            width: max-content;
+
+            // width: 100%;
+            th {
+                padding: 10px 0;
+                background-color: var(--light-blue);
+                min-width: 125px;
+
+                &:first-child {
+                    padding: 0 20px;
+                }
+            }
+
+            td {
+                padding: 5px;
+            }
+        }
+
+        .input-main-data {
+            &.price {
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "Rs.";
+                    left: 10px;
+                    top: 9px;
+                    color: #647C9B;
+                    font-size: 14px;
+                }
+
+                input {
+                    max-width: 125px;
+                    padding-left: 35px;
+                }
+            }
+        }
+
+    }
+
+    .input-with-select {
+        .rs-picker-daterange {
+            width: 100%;
+        }
+
+        .rs-input-group-inside {
+            .rs-input {
+                padding: 6px;
+                border-radius: 3px;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+
+.reconcilitionfilter{
+    .input-with-select{
+        button{
+            &::after{
+               background-image: url(../../../assest/images/icons/search.svg);
+               top: 7px;
+               padding: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.aboutus-main-vs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        background: #fff;
+        padding: 0 14px;
+        .appversion{
+            font-size: 14px;
+            color: #647C9B;
+            font-weight: 600;
+        }
+    .image-data{
+        text-align: center;
+        width: 100%;
+        
+        img{
+            max-width: 111px;
+        }
+        border-bottom: 5px solid #DFE9F3;
+        margin-bottom: 10px;
+    }
+    .text-data {
+        width: 100%;
+        text-align: left;
+        p{
+            font-size: var(--font_14);
+            line-height: 20px;
+            color: var( --black-color);
+            span{
+                &.res{
+                    color: #4679BD;
+                }
+                &.ava{
+                    color:#F68C1E;
+                }
+            }
+          
+            span.fair {
+                color: #4679BD;
+                font-weight: 700;
+            }
+            span.bay{
+                color:#F68C1E;
+                font-weight: 700;
+            }
+        }
+    }
+}

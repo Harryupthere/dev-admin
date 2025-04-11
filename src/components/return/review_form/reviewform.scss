@@ -1,0 +1,265 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.review-form {
+    font-size: var(--font_14);
+    width: 90%;
+    @include media_1280 {
+        font-size: var(--font_12);
+    }
+    @include media_1440 {
+        width: 100%;
+    }
+
+    p {
+        margin: 0;
+        font-size: var(--font_14);
+        font-weight: 300;
+        line-height: 17.5px;
+        @include media_1280 {
+            font-size: var(--font_12);
+        }
+    }
+
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--light-blue);
+        padding-bottom: 20px;
+
+        .lef-side {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            .border-blue {
+                border: 1px solid var(--light-blue);
+                height: 100%;
+            }
+
+            .profile {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 50%;
+                }
+            }
+
+            .order-number {
+                p {
+                    span {
+                        font-weight: 700;
+                        color: var(--theme-blue);
+                    }
+                }
+            }
+        }
+    }
+
+    .form-body {
+
+        .section-heading {
+            font-size: var(--font_14);
+            font-weight: 700;
+            margin-bottom: 16px;
+
+            @include media_1280 {
+                font-size: var(--font_12);
+            }
+        }
+
+        .two-section-divider {
+            padding: 20px 0;
+            display: flex;
+            gap: 50px;
+            border-bottom: 1px solid var(--light-blue);
+            @include media_991{
+                flex-direction: column;
+                gap: 30px;
+            }
+            &:last-child {
+                border: none;
+                padding-bottom: 0;
+            }
+
+            .items {
+                width: 50%;
+                @include media_991{
+                   width: 100%;
+                }
+                .actions-btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+
+                .product-details {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 20px;
+
+                    .item-img {
+                        img {
+                            height: 75px;
+                            width: 75px;
+                            border-radius: 3px;
+                            border: 1px solid var(--light-blue);
+                        }
+                    }
+
+                    .item-details {
+                        p {
+                            margin-bottom: 4px;
+                        }
+                    }
+                }
+
+                .item-detail {
+                    margin-bottom: 20px;
+                }
+
+                .table-section {
+
+                    .increase-input {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        font-weight: 500;
+
+                        input {
+                            width: 30px;
+                            text-align: center;
+                            padding: 5px;
+                            height: 24px;
+                        }
+
+                        button {
+                            font-size: 20px;
+                            background-color: var(--light-blue);
+                            width: 24px;
+                            height: 24px;
+                            border: none;
+                        }
+                    }
+
+                    table {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        th,
+                        td {
+                            font-size: var(--font_14);
+                            padding: 6px 0;
+                            text-align: right;
+                            min-width: 100px;
+                            @include media_1280 {
+                                font-size: var(--font_12);
+                            }
+                            &:first-child {
+                                text-align: left;
+                            }
+                        }
+
+                        td {
+                            font-weight: 300;
+
+                            .view-link {
+                                font-weight: 600;
+                                text-decoration: underline;
+                            }
+
+                            .icon-input-bth {
+                                position: relative;
+                                max-width: 115px;
+                                margin-left: auto;
+
+                                .btn-edit-input {
+                                    position: absolute;
+                                    right: 7px;
+                                    top: 9px;
+                                }
+
+                                input {
+                                    width: 100%;
+                                    font-size: var(--font_14);
+                                    @include media_1280 {
+                                        font-size: var(--font_12);
+                                    }
+                                }
+
+                                &.rs {
+                                    input {
+                                        padding-left: 28px;
+                                    }
+
+                                    &::before {
+                                        content: 'Rs';
+                                        position: absolute;
+                                        left: 5px;
+                                        top: 11px;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+                        .qty {
+                            background-color: #F44336;
+                            width: max-content;
+                            padding: 2px;
+                            border-radius: 3px;
+                            color: #fff;
+                            font-weight: 700;
+                            margin-left: auto;
+                        }
+                    }
+                }
+
+                .input-main-data {
+                    margin-bottom: 6px;
+
+                    label {
+                        font-weight: 300;
+                        color: var(--black-color);
+                        font-size: var(--font_14);
+                        @include media_1280 {
+                            font-size: var(--font_12);
+                        }
+                    }
+
+                    &.flex_data {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .icon-input-bth {
+                            position: relative;
+                            max-width: 80%;
+                            width: 50%;
+                        }
+                    }
+
+                    .icon-input-bth {
+                        position: relative;
+
+                        .btn-edit-input {
+                            position: absolute;
+                            right: 7px;
+                            top: 9px;
+                        }
+
+                        input {
+                            width: 100%;
+                            font-size: var(--font_14);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+// @use '../../../assest/scss/abstract/mixins' as *;
+// .filter-wrapper{
+//     .filter-container{
+//         background-color: #fff;
+//         padding: 10px 20px;
+//         margin-bottom: 10px;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         .left-side{
+//             display: flex;
+//             align-items: center;
+//             gap: 10px;
+//             button{
+//                 &.dropdown-toggle{
+//                 color: var(--color_647C9B);
+//                 font-weight: 600;
+//                 background-color: var(--light-blue);
+//                 padding: 7.5px 10px;
+//                 line-height: 20px;
+//                 border-radius: 3px;
+//                 align-items: center;
+//                 font-size: var(--font_16);
+//                 border: none;
+//                 padding-right: 30px;
+//                 @include media_1600{
+//                 font-size: var(--font_14);
+//                 }
+//             }
+//             }
+//             .searchbox{
+//                 display: flex;
+//                 position: relative;
+//                 .input-group{
+//                     display: flex;
+//                     flex-wrap: nowrap;
+//                 }
+//                 .searchicon {
+//                     position: absolute;
+//                     right: 7.5px;
+//                     top: 7px;
+//                 }
+//                 input{
+//                     padding: 7.5px 10px;
+//                     border-radius: 3px;
+//                     padding-right: 30px;
+//                     &:focus{
+//                         outline: none;
+//                     }
+//                 }
+//                 button{
+//                     text-align: left;
+//                     &::after{
+//                         content: '';
+//                         background-image: url(../../../assest/images/icons/downarrow.svg);
+//                         border: none;
+//                         padding: 10px;
+//                         background-repeat: no-repeat;
+//                         position: absolute;
+//                         right: 5px;
+//                         top: 15px;
+//                     }
+//                 }
+//             }
+//             .reset{
+//                 button{
+//                     @include border_button(var(--font_16),var(--orange-color),6.5px 10px,3px,var(--orange-color),600);
+//                     line-height: 20px;
+//                 }
+//             }
+//         }
+//         .right-side{
+//                 display: flex;
+//                 gap: 10px;
+//             .blue_button{
+//                 min-width: 120px;
+//             }
+//         }
+//     }
+// }

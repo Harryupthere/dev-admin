@@ -1,0 +1,73 @@
+@use '../../assest/scss/abstract/_mixins.scss' as *;
+.insight-wrapped {
+    .date-card {
+        background-color: #fff;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+    .card-grid {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        @include media_1440{
+            gap: 15px;
+        }
+        .card-box {
+            width: calc(20% - 20px);
+            @include media_1440{
+                width: calc(25% - 20px);
+            }
+            @include media_991{
+                width: calc(33.33% - 20px);
+            }
+            @include media_768{
+                width: calc(50% - 20px);
+            }
+            @include media_480{
+                width:100%;
+            }
+            .commoncard-wrapped{
+                height: 100%;
+                .item{
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .graph-flex-box {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        @include media_991{
+           flex-direction: column;
+        }
+        .right-box {
+            width: 70%;
+            @include media_991{
+              width: 100%;
+             }
+        }
+        .left-box {
+            width: 30%;
+            @include media_991{
+                width: 100%;
+               }
+        }
+    }
+
+    .top-product-table {
+        .data-table-wrapped {
+            .data-table-container {
+                table {
+                    td{
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

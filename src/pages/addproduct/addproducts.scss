@@ -1,0 +1,85 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.add-products {
+    .main_heading{
+        margin-bottom: 20px;
+        h2{
+            font-weight: 600;
+        }
+    }
+    .dashboard-header-tittle{
+        .main_heading{
+            margin-bottom: 0;
+            h2{
+                font-weight: 700;
+            }
+        }
+    }
+    .asterisk {
+        font-size: var(--font_16);
+        color: #F44336;
+
+    }
+
+    .addname {
+        .input-main-data {
+            margin-bottom: 20px;
+        }
+    }
+
+    .theme-card {
+        margin-bottom: 20px;
+    }
+
+    .specification-editor{
+        margin-bottom: 20px;
+    }
+    .product-descriptions{
+        .ql-editor{
+            p{
+                font-family: var(--Quicksand);
+                color: var(--black-color);
+            }
+            &.ql-blank{
+                &::before{
+                    color: var(--color_647C9B);
+                    font-weight: 300;
+                    font-style: normal;
+                    font-family: var(--Quicksand)
+                }
+            }
+        }
+    }
+    .upload-main-img {
+        .input-main-data {
+            margin-bottom: 10px;
+        }
+    }
+    .warranty-info{
+        .input-main-data{
+            margin-bottom: 10px;
+            max-width: 40%;
+            @include media_768{
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        .bordered_text_box{
+            padding: 10px;
+            border: 1px solid var(--light-blue);
+            border-radius: 3px;
+        }
+    }
+    .user-action{
+        justify-content: space-between;
+        align-items: center;
+        .action-btns{
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .action-card{
+        &.user-action {
+        flex-wrap: wrap;
+        }
+    }
+}

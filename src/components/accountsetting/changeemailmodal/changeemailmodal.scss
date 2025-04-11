@@ -1,0 +1,42 @@
+.changesetting{
+    .main_heading{
+        margin-bottom: 10px;
+    }
+    .error{
+        span{
+            color: #E33629;
+            font-size: var(--font_14);
+        }
+    }
+    .content{
+        .steps{
+            margin-bottom: 20px;
+            .check_box {
+                padding: 0px 6px;
+                border: 2px solid;
+                border-color: var(--theme-blue);
+                color: var(--theme-blue);
+            }
+            .data-label {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin-bottom: 5px;
+            }
+            .action-btn{
+                display: flex;
+                gap: 5px;
+                button{
+                    font-weight: 300;
+                }
+                input {
+                    padding: 0 10px;
+                    border-radius: 3px;
+                    &.otpbox{
+                        width: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

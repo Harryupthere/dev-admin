@@ -1,0 +1,163 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+
+.logistics-data {
+    margin-bottom: 20px;
+    .boldfont {
+        font-size: var(--font_14);
+        font-weight: 600;
+        display: inline-block;
+    }
+    .theme-card{
+        padding: 0 20px;
+        margin-bottom: 20px;
+        @include media_1024{
+            width: max-content;
+            overflow-x: auto;
+        }
+    }
+    .info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        .left-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @include media_768 {
+                flex-wrap: wrap;
+            }
+        }
+
+        .info-in-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            label {
+                font-weight: 300;
+                font-size: var(--font_14);
+
+                @include media_768 {
+                    font-size: var(--font_12);
+                }
+            }
+
+            .profilepic {
+                img {
+                    height: 19px;
+                    width: 19px;
+                    border-radius: 50%;
+                }
+            }
+
+
+
+            span {
+                color: var(--theme-blue);
+                font-weight: 700;
+                font-size: var(--font_14);
+
+                @include media_768 {
+                    font-size: var(--font_12);
+                }
+            }
+        }
+    }
+
+    .data-table-wrapped {
+        margin-bottom: 10px;
+
+        .data-table-container {
+            table {
+                overflow: hidden;
+                border-radius: 4px;
+                margin-bottom: 20px;
+                th{
+                    text-align: right;
+                    width: 33%;
+                    &:first-child{
+                        text-align: left;
+                    }
+                }
+            }
+            .rows {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: 1px solid var(--light-blue);
+                .order-sb-details {
+                    display: flex;
+                    gap: 10px;
+                    .item{
+                        border-right: 1px solid var(--light-blue);
+                        padding-right: 10px;
+                        .status{
+                            background-color: var(--light-blue);
+                            color: #99B9E3;
+                            border-radius: 3px;
+                            padding: 3px;
+                        }
+                        .boldfont{
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                p{
+                    margin-bottom: 0;
+                }
+                .td {
+                    min-width: 120px;
+                }
+            }
+            .qty {
+                background-color: #F44336;
+                width: max-content;
+                padding: 2px;
+                border-radius: 3px;
+                color: #fff;
+                font-weight: 700;
+            }
+
+            .item-dtails {
+                display: flex;
+                gap: 10px;
+                align-items: self-start;
+
+                .item-img {
+                    border: 1px solid var(--light-blue);
+                    border-radius: 3px;
+                    overflow: hidden;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                .details {
+                    p {
+                        margin-bottom: 4px;
+                        line-height: 17.5px;
+                    }
+
+                    .orange {
+                        font-weight: 700;
+                        color: var(--orange-color);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .action-btns {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}

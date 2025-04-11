@@ -1,0 +1,25 @@
+.filter-wrapper-onboarding {
+    .filter-container {
+        background-color: #fff;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .left-side,.right-side {
+        display: flex;
+        gap: 10px;
+        .selected {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            .selected-data{
+                font-weight: 700;
+            }
+        }
+       
+    }
+}

@@ -1,0 +1,104 @@
+@use '../../../assest/scss/abstract/mixins' as *;
+.campaigns-data-wrapped {
+    .data-table-wrapped {
+        .data-table-container {
+            margin-bottom: 20px;
+            table{
+                th{
+                    width: 25%;
+                    font-size: var(--font_16);
+                    @include media_1600{
+                    font-size: var(--font_14);
+                    }
+                    @include media_1280 {
+                        font-size: var(--font_12);
+                    }
+                }
+                .three_items{
+                    th{
+                    width: 33.33%;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-item {
+        padding: 10px 20px;
+        background-color: var(--white-color);
+        border-radius: 3px;
+        margin-bottom: 20px;
+
+        .empty-data {
+            text-align: center;
+            color: var(--color_647C9B);
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: var(--font_14);
+            font-weight: 300;
+            @include media_1280 {
+                font-size: var(--font_12);
+            }
+        }
+
+        .bold-text {
+            font-weight: 700;
+            color: var(--theme-blue);
+        }
+
+        .item-body {
+            padding: 10px 0;
+            display: flex;
+            border-bottom: 1px solid var(--light-blue);
+
+            .body-item {
+                border-right: 1px solid var(--light-blue);
+                padding: 0 10px;
+                width: 50%;
+                &.campaign-all-detail{
+                    display: flex;
+                    gap: 20px;
+                }
+                &:first-child {
+                    padding-left: 0;
+                }
+
+                &:last-child {
+                    border: none;
+                }
+
+                p {
+                    margin-bottom: 10px;
+                }
+
+                .given-img {
+                    img {
+                        max-width: 300px;
+                        max-height: 200px;
+                        width: auto;
+                        @include media_1280 {
+                           max-width: 200px;
+                        }
+                        @include media_991{
+                            max-width: 100px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .item-footer {
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .rightside {
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}

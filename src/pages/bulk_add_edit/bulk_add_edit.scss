@@ -1,0 +1,13 @@
+@use '../../assest/scss/abstract/mixins' as *;
+.bulk-add-wrapped{
+    .inner-content{
+        width: 70%;
+        @include media_1600{
+            width: 80%;
+        }
+        @include media_768{
+            width: 100%;
+        }
+    }
+    
+}
